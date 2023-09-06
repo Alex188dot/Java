@@ -218,7 +218,8 @@ public class If_else {
 
         /* Exercise: write a program that will ask how many units have been sold and the total revenue
         for the last quarter. If the agent has sold more than 300 units and the total revenue
-        is more than 10000€, they are eligible to receive the bonus.
+        is more than 10000€, they are eligible to receive the bonus. If they are, show the bonus
+        which is always equal to 5% of the revenue.
          */
         /*
 
@@ -232,10 +233,15 @@ public class If_else {
 
         if (units >= 300 && sales >= 10000) {
             System.out.println("Well done! You are eligible for the bonus!");
+            System.out.println("Your bonus is: " + sales * 0.05);
         } else {
             System.out.println("You are not eligible for the bonus.");
         }
-         */
+        */
+
+
+
+
 
     }
 }
