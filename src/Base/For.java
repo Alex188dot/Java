@@ -77,7 +77,7 @@ public class For {
 
 
         // Exercise: Ask the user 5 numbers and then show the sum
-
+        /*
         Scanner in = new Scanner(System.in);
 
         System.out.println("Insert 5 numbers and I will return the sum at the end");
@@ -100,11 +100,9 @@ public class For {
         int even = 0;
         int oddSum = 0;
         int evenSum =0;
-        int totalSum = 0;
         for (int i = 1; i <= 10; i++) {
             System.out.println("Insert a number: ");
             int number =  in.nextInt();
-            totalSum += number;
             if (number % 2 == 0) {
                 even += 1;
                 evenSum += number;
@@ -117,6 +115,9 @@ public class For {
         System.out.println("There are: " + odd + " odd numbers");
         System.out.println("The total sum of even numbers is: " + evenSum);
         System.out.println("The total sum of odd numbers is: " + oddSum);
-        System.out.println("The total sum of all numbers is: " + totalSum);
+        System.out.println("The total sum of all numbers is: " + (evenSum+oddSum));
     }
-}
+
+
+*/
+    }}
