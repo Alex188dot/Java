@@ -66,11 +66,15 @@ public class For {
         System.out.println("Please insert where you would like to finish: ");
         int finish = in.nextInt();
 
-        for (int i = start; i <= finish; i++) {
-            System.out.println(num + " X " + i + " = " + (num * i));
+        if (start <= finish) {
+            for (int i = start; i <= finish; i++) {
+                System.out.println(num + " X " + i + " = " + (num * i));
+                }
+        } else {
+          System.out.println("Please insert a finish number, higher than the start number");
         }
-
          */
+
 
         // Exercise: Ask the user 5 numbers and then show the sum
 
