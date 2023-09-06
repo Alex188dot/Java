@@ -9,6 +9,7 @@ public class If_else {
         if(n1 < n2) {
             System.out.println("This condition is true!");
         }
+        System.out.println("****************************************");
 
         // IF ELSE
         if (n1 > n2) {
@@ -31,6 +32,8 @@ public class If_else {
             System.out.println("Number is lower than 10");
         }
     */
+
+        System.out.println("****************************************");
         // IF, ELSE IF, ELSE
 
         int num1 = 6;
@@ -42,6 +45,7 @@ public class If_else {
         } else {
             System.out.println("Number is lower than 10");
         }
+        System.out.println("****************************************");
 
         /* Exercise: given the time, return if it is morning, afternoon, evening or night.
 
@@ -63,6 +67,7 @@ public class If_else {
         } else {
             System.out.println("Morning");
         }
+        System.out.println("****************************************");
 
         // Exercise: Ask the user to insert an exercise for the division. If the second number is equal to 0
         // log: Invalid division. Otherwise, show the result. The numbers should be double type.
@@ -83,7 +88,7 @@ public class If_else {
         }
         */
         // Exercise: Ask the user what operation they want to do and after that asked two numbers and then show the result
-
+        /*
         Scanner in = new Scanner(System.in);
         System.out.println("Please select an operation: \n1) Sum;\n2) Subtraction;\n3) Multiplication;\n4) Division");
         int choice = in.nextInt();
@@ -163,6 +168,74 @@ public class If_else {
             System.out.println("Invalid choice!");
         }
 
+         */
+
+        System.out.println("****************************************");
+
+        /*
+           Exercise: Ask the user an integer number and log if it is odd or even
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please insert an integer, to check whether the number is even or odd: ");
+        int numb = in.nextInt();
+
+        if (numb % 2 == 0) {
+            System.out.println("The number is even!");
+        } else {
+            System.out.println("The number is odd!");
+        }
+        */
+
+        System.out.println("****************************************");
+        /*
+        AND (&&) and OR (||) operators - Also called Literal Operators
+
+        NB the XOR operator - also called exclusive or, represented by the symbol '^',
+        only wants one element of two to be true (which means that if both are true, it will return false)
+
+         */
+        /*
+        // Exercise: Create a software to see if you can ask for the driving license, that is if:
+        // the user is 18 years or older and is resident in Italy; (Use .equals() for strings)
+
+        // Declare variables first
+        int age;
+        String residency;
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("How old are you?");
+        age = in.nextInt();
+
+        System.out.println("Where do you live?");
+        residency = in.next();
+
+        if (age >= 18 && residency.equals("Italy")) {
+            System.out.println("Please show me your driving license");
+        } else {
+            System.out.println("You're good to go!");
+        }
+        */
+
+        /* Exercise: write a program that will ask how many units have been sold and the total revenue
+        for the last quarter. If the agent has sold more than 300 units and the total revenue
+        is more than 10000€, they are eligible to receive the bonus.
+         */
+        /*
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("How many units have you sold in the last quarter?");
+        int units = in.nextInt();
+
+        System.out.println("What was the € amount of your sales in the last quarter?");
+        int sales = in.nextInt();
+
+        if (units >= 300 && sales >= 10000) {
+            System.out.println("Well done! You are eligible for the bonus!");
+        } else {
+            System.out.println("You are not eligible for the bonus.");
+        }
+         */
 
     }
 }
