@@ -1,6 +1,5 @@
 package Base;
 
-import java.util.Scanner;
 
 public class Strings {
     public static void main(String[] args) {
@@ -27,7 +26,7 @@ public class Strings {
         for (int i = 0; i < word.length(); i++) {
                 if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o' || word.charAt(i) == 'u') {
                     wordVowels++;
-                };
+                }
         }
         System.out.println("Vowels in the word: " + wordVowels);
 
@@ -39,7 +38,7 @@ public class Strings {
                 if (word.charAt(i) == vowels[j]) {
                     wordVowels2++;
                 }
-            };
+            }
         }
         System.out.println("Vowels in the word: " + wordVowels2);
 
@@ -48,10 +47,6 @@ public class Strings {
         // Exercise: get a string and return it the other way around
         // After that check if it is a palindrome
 
-        String test;
-        test = "A";
-        test += "B";
-        test += " Ciao";
 
         String word2 = "radar";
         String word3 = "";
