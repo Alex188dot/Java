@@ -39,7 +39,7 @@ public class While {
         Scanner in = new Scanner(System.in);
         int num;
 
-
+        /*
         int sum2 = 0;
         do {
             System.out.println("Insert a number, or 0 to exit: ");
@@ -48,7 +48,21 @@ public class While {
         } while (num != 0);
 
         System.out.println("Total: " + sum2);
+        */
+
+        // Exercise: ask the user to insert 1 for heads, 2 for tails. If the user guesses correctly, print "You guessed correctly!" Else retry.
 
 
+        do {
+            int ranNum = (int)(Math.random() * 2 + 1);
+            System.out.println("Press 1 for heads, 2 for tails, 0 to exit: ");
+            num = in.nextInt();
+            if (num == ranNum) {
+                System.out.println("Well done, you guessed correctly!");
+                break;
+            } else {
+                System.out.println("Try again!");
+            }
+        } while (num != 0);
     }
 }
