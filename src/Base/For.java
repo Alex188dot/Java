@@ -120,4 +120,48 @@ public class For {
 
 
 */
+
+
+        //BREAK
+
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            System.out.println(i);
+        }
+
+        // Exercise: ask the user to input 5 numbers and sum them.
+        // If the sum is higher than 50, exit the program
+        /*
+        Scanner in = new Scanner(System.in);
+        int sum1 = 0;
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Please insert a number");
+            int number =  in.nextInt();
+            sum1 += number;
+            if (sum1 >= 50) {
+                break;
+            }
+        }
+           */
+        // CONTINUE
+
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+            System.out.println(i);
+        }
+
+        // Exercise: print the even numbers until 10, using continue
+
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 1) {
+                continue;
+            }
+            System.out.println(i);
+        }
+
+
     }}
