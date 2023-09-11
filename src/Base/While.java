@@ -52,17 +52,17 @@ public class While {
 
         // Exercise: ask the user to insert 1 for heads, 2 for tails. If the user guesses correctly, print "You guessed correctly!" Else retry.
 
+        int ranNum;
 
         do {
-            int ranNum = (int)(Math.random() * 2 + 1);
-            System.out.println("Press 1 for heads, 2 for tails, 0 to exit: ");
+            ranNum = (int)(Math.random() * 2 + 1);
+            System.out.println("Press 1 for heads, 2 for tails");
             num = in.nextInt();
             if (num == ranNum) {
                 System.out.println("Well done, you guessed correctly!");
-                break;
             } else {
                 System.out.println("Try again!");
             }
-        } while (num != 0);
+        } while (num != ranNum);
     }
 }
