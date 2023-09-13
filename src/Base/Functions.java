@@ -118,11 +118,11 @@ public class Functions {
     }
 
     public static void multiplication(int a, int b) {
-        System.out.println("Subtraction: " + (a * b));
+        System.out.println("Multiplication: " + (a * b));
     }
 
     public static void division(int a, int b) {
-        System.out.println("Subtraction: " + (a / b));
+        System.out.println("Division: " + (a / b));
     }
 
 
