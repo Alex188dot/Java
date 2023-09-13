@@ -18,8 +18,11 @@ public class RockPaperScissors {
             playerOne = in.nextLine();
 
             int res1 = 0;
-            int res2 = result();
+            int res2 = playerTwo();
             System.out.println("Your choice: " + cleanString(playerOne));
+            if (!Objects.equals(cleanString(playerOne), "rock") || !Objects.equals(cleanString(playerOne), "paper") || !Objects.equals(cleanString(playerOne), "scissors") || !Objects.equals(cleanString(playerOne), "exit")) {
+              System.out.println("---------------Please insert a valid command!-------------");
+            };
             String resultString = "";
             if (res2 == 1) {
                 resultString = "rock";
@@ -76,19 +79,19 @@ public class RockPaperScissors {
     }
 
 
-    public static int result() {
+    public static int playerTwo() {
         // 1 win, 2 lose, 3 even
         Random rm = new Random();
-        String playerTwo;
+        String result;
         String [] symbols = {"rock", "paper", "scissors"};
-        playerTwo = symbols[rm.nextInt(3)];
-        System.out.println(playerTwo);
+        result = symbols[rm.nextInt(3)];
+        System.out.println(result);
         int res = 0;
-        if (playerTwo.equals("rock")) {
+        if (result.equals("rock")) {
             res = 1;
-        } else if (playerTwo.equals("paper")) {
+        } else if (result.equals("paper")) {
             res = 2;
-        } else if (playerTwo.equals("scissors")) {
+        } else if (result.equals("scissors")) {
             res = 3;
         }
         return res;
