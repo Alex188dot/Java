@@ -30,6 +30,44 @@ public class Functions {
         } while (choice != 0);
         */
 
+        int choice;
+
+        do {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Please insert your choice: \n1) for sum;\n2) for subtraction\n3) for multiplication\n4) for division\n5) to exit");
+            choice = in.nextInt();
+            if (choice == 1) {
+                System.out.println("Please insert your first number");
+                int firstNum = in.nextInt();
+                System.out.println("Please insert your second number");
+                int secondNum = in.nextInt();
+                sum(firstNum, secondNum);
+            } else if (choice == 2) {
+                System.out.println("Please insert your first number");
+                int firstNum = in.nextInt();
+                System.out.println("Please insert your second number");
+                int secondNum = in.nextInt();
+                subtraction(firstNum, secondNum);
+            } else if (choice == 3) {
+                System.out.println("Please insert your first number");
+                int firstNum = in.nextInt();
+                System.out.println("Please insert your second number");
+                int secondNum = in.nextInt();
+                multiplication(firstNum, secondNum);
+            } else if (choice == 4) {
+                System.out.println("Please insert your first number");
+                int firstNum = in.nextInt();
+                System.out.println("Please insert your second number");
+                int secondNum = in.nextInt();
+                if (secondNum != 0) {
+                    division(firstNum, secondNum);
+                } else {
+                    System.out.println("Impossible to divide a number by 0");
+                }
+            }
+        } while (choice != 5);
+
+
 
 
 
