@@ -12,7 +12,14 @@ public class Functions {
 
 
         calcPrice(9.99, 20);
+        System.out.println(calcPrice2(10,15));
 
+        double result = calcPrice2(12, 3);
+        System.out.println("The result is: " + result);
+
+        System.out.println(divide(10,2));
+
+        System.out.println("----------------------------");
         /*
         int choice;
 
@@ -29,7 +36,7 @@ public class Functions {
             }
         } while (choice != 0);
         */
-
+        /*
         int choice;
 
         do {
@@ -67,7 +74,9 @@ public class Functions {
             }
         } while (choice != 5);
 
+        */
 
+        System.out.println("----------------------------");
 
 
 
@@ -125,6 +134,19 @@ public class Functions {
         System.out.println("Division: " + (a / b));
     }
 
+    // Functions with return - Need to declare the data type it will return
+
+    public static double calcPrice2(double price, int discount) {
+        return price * (100 - discount)/ 100;
+    }
+
+    public static double divide(double a, double b) {
+        if (b != 0) {
+            return a/b;
+        } else {
+            return 0;
+        }
+    }
 
 
 
