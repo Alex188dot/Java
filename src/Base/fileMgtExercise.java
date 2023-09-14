@@ -12,6 +12,7 @@ public class fileMgtExercise {
         File file = new File("address_book.txt"); // This is to open the file
 
         /* Exercise: Address Book. Ask the user to insert Name, Last name and Tax ID tp be inserted in the address book.
+        If new user is added with the same Tax ID as the other one, the program will reject it.
         Include a feature for which the user can search for other users by name, last name or tax ID.
          */
 
@@ -27,11 +28,16 @@ public class fileMgtExercise {
             if (choice == 1) {
                 FileReader reader = new FileReader(file);
                 Scanner FileScanner = new Scanner(reader);
-                System.out.println("Please insert the first name, last name and tax ID of the user you want to add (lower case)");
-                String phrase = in.nextLine();
+                System.out.println("Please insert the first name");
+                String name = in.nextLine();
+                System.out.println("Please insert the last name");
+                String lastname = in.nextLine();
+                System.out.println("Please insert the tax ID");
+                String taxID = in.nextLine();
+                String phrase = name + " " + lastname + " " + taxID + "\n";
                 while (FileScanner.hasNextLine()) {
                     String data = FileScanner.nextLine();
-                    if (data.contains(phrase)) {
+                    if (data.contains(taxID)) {
                         System.out.println("User already in the system!");
                         nums.add(1);
                     } else {
