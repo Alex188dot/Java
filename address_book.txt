@@ -1,7 +1,4 @@
 
 john doe 000154b
 mary jones 000143f
-mary mary
-mary mary
-
 jane white 000455h
