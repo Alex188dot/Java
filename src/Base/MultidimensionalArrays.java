@@ -1,6 +1,6 @@
 package Base;
 
-public class multidimensionalArrays {
+public class MultidimensionalArrays {
     public static void main(String[] args) {
         // Multidimensional arrays
         String[][] classes = {

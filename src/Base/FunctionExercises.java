@@ -1,6 +1,6 @@
 package Base;
 
-public class functionExercises {
+public class FunctionExercises {
 
     public static void main(String[] args) {
 
