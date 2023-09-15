@@ -4,7 +4,7 @@ public class Rectangle {
     /*
     Exercise: Create a Rectangle class:
     1) Create the constructor with height and width properties, type: double;
-    2) Create getters and setters, check also if the values are positive;
+    2) Create getters and setters, check also if the values are positive, using the ternary operator;
     3) Create the toString method;
     4) Create the methods to calculate the area and the perimeter;
 
