@@ -11,7 +11,7 @@ public class Vehicle {
 
      */
 
-    private final int cost;
+    public int cost;
 
     Vehicle (String plate, String model, String owner, int cost) {
         this.plate = plate;
