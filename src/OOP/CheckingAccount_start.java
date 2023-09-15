@@ -9,12 +9,9 @@ public class CheckingAccount_start {
 
         List<Integer> transactions = new ArrayList<>();
 
-
-
         CheckingAccount c1 = new CheckingAccount(10000, "John Doe", 112390);
 
         int choice = 0;
-
 
         do {
             Scanner in = new Scanner(System.in);
@@ -61,10 +58,6 @@ public class CheckingAccount_start {
                 System.out.println("Logout successful");
             }
         } while (choice != 0);
-
-
-
-
 
     }
 }
