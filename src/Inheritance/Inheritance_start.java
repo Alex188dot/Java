@@ -49,6 +49,21 @@ public class Inheritance_start {
             System.out.println(el_t);
         }
 
+        System.out.println("------------------------------------");
+
+        // To create an array of a Class that contains both students and teachers:
+
+        ArrayList<Person> classC = new ArrayList<>();
+        classC.add(t1);
+        classC.add(t2);
+        classC.add(s1);
+        classC.add(s2);
+
+        for (Person el_p: classC) {
+            System.out.println(el_p); // It will print the teachers and students To String methods
+        }
+
+
 
 
 
