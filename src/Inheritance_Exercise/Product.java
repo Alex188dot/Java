@@ -15,10 +15,10 @@ For the NonFoodProduct class, override the toString method and print the materia
 public class Product {
     private String barCode;
     private String description;
-    private int price;
+    private double price;
 
 
-    public Product(String barCode, String description, int price) {
+    public Product(String barCode, String description, double price) {
         this.setBarCode(barCode);
         this.setDescription(description);
         this.setPrice(price);
@@ -42,11 +42,11 @@ public class Product {
         this.description = description;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -55,7 +55,7 @@ public class Product {
     }
 
   public void applyDiscount(){
-      this.setPrice((int) (this.getPrice() * 0.95));
+      this.setPrice((double) (this.getPrice() * 0.95));
   }
 }
 

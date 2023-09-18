@@ -32,8 +32,6 @@ public class FoodProduct extends Product {
     }
 
 
-
-
     public void calculateDiscount() {
         long daysUntilExpiration = getDaysUntilExpiration();
         if (daysUntilExpiration <= 10) {
