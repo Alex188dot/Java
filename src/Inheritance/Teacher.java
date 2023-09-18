@@ -20,4 +20,9 @@ public class Teacher extends Person {
         System.out.println("Hello I'm teacher " + getName() + ". I teach " + this.getSubject());
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + (getName()) + " - Lastname: " + (getLastName()) + " - Age: " + getAge() + " - Subject: " + getSubject();
+    }
+
 }

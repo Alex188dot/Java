@@ -40,4 +40,9 @@ public class Person {
     protected void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + (getName()) + " - Lastname: " + (getLastName()) + " - Age: " + getAge();
+    }
 }
