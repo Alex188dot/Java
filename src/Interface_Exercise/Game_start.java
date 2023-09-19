@@ -1,6 +1,5 @@
 package Interface_Exercise;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Game_start {
     public static void main(String[] args) {
