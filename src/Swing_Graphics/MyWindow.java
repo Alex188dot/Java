@@ -30,6 +30,8 @@ public class MyWindow extends JFrame {
         getContentPane().add(button);
 
         getContentPane().setLayout(new java.awt.FlowLayout());
+
+        setLocationRelativeTo(null);
     }
 
     public static void main(String[] args) {
