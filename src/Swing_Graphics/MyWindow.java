@@ -51,12 +51,18 @@ public class MyWindow extends JFrame {
                     Statement st = connect.createStatement();
                     st.executeUpdate("INSERT INTO users VALUES(null,'"+name+"', '"+lastname+"', '"+city+"', "+age+", "+office+")");
                     System.out.println("Employee inserted correctly");
+                    field.setText("");
+                    field2.setText("");
+                    field3.setText("");
+                    field4.setText("");
+                    field5.setText("");
                 } catch (SQLException event) {
                     System.out.println("Connection failed");
                     throw new RuntimeException(event);
                 }
             }
         });
+
 
         JPanel panel = new JPanel();
         panel.setLayout(new java.awt.GridLayout(6, 2));
@@ -79,6 +85,7 @@ public class MyWindow extends JFrame {
                 System.out.println("Successfully logged out");
             }
         });
+
 
 
 
