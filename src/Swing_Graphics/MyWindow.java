@@ -3,16 +3,21 @@ package Swing_Graphics;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class MyWindow extends JFrame {
 
     public MyWindow() {
-        setTitle("Swing Window Example");
+        setTitle("Add employee");
 
         setSize(400, 300);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         JLabel label = new JLabel("Name: ");
         JTextField field = new JTextField();
@@ -26,21 +31,35 @@ public class MyWindow extends JFrame {
         JLabel label4 = new JLabel("Age: ");
         JTextField field4 = new JTextField();
         field4.setColumns(15);
+        JLabel label5 = new JLabel("Office: ");
+        JTextField field5 = new JTextField();
+        field5.setColumns(15);
 
 
 
-        JButton button = new JButton("Click me");
+        JButton button = new JButton("Insert user");
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println(field.getText());
+                String name = field.getText();
+                String lastname = field2.getText();
+                String city = field3.getText();
+                int age = Integer.parseInt(field4.getText());
+                int office = Integer.parseInt(field5.getText());
+
+                try {
+                    Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaDB", "root", "root");
+                    Statement st = connect.createStatement();
+                    st.executeUpdate("INSERT INTO users VALUES(null,'"+name+"', '"+lastname+"', '"+city+"', "+age+", "+office+")");
+                    System.out.println("Employee inserted correctly");
+                } catch (SQLException event) {
+                    System.out.println("Connection failed");
+                    throw new RuntimeException(event);
+                }
             }
         });
 
-        // Create a panel to hold the labels and fields
         JPanel panel = new JPanel();
-        // Use a grid layout with two columns and four rows
-        panel.setLayout(new java.awt.GridLayout(4, 2));
-        // Add the components to the panel
+        panel.setLayout(new java.awt.GridLayout(6, 2));
         panel.add(label);
         panel.add(field);
         panel.add(label2);
@@ -49,12 +68,24 @@ public class MyWindow extends JFrame {
         panel.add(field3);
         panel.add(label4);
         panel.add(field4);
+        panel.add(label5);
+        panel.add(field5);
 
-        // Add the panel and the button to the content pane
+
+        JButton closeButton = new JButton("Exit");
+        closeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+                System.out.println("Successfully logged out");
+            }
+        });
+
+
+
         getContentPane().add(panel);
         getContentPane().add(button);
+        getContentPane().add(closeButton);
 
-        // Use a flow layout for the content pane
         getContentPane().setLayout(new java.awt.FlowLayout());
 
         setLocationRelativeTo(null);
