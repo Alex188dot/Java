@@ -118,20 +118,16 @@ public class UpdateEmployee extends JFrame {
                 int age = Integer.parseInt(field4.getText());
                 int office = Integer.parseInt(field5.getText());
                 int id = Integer.parseInt(field6.getText());
-
                 try {
                     Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaDB", "root", "root");
-                    // Use a parameterized query with placeholders (?)
                     String sql = "UPDATE `users` SET `name` = ?, `lastname` = ?, `city` = ?, `age` = ?, `office_id` = ? WHERE `id` = ?;";
                     PreparedStatement ps = connect.prepareStatement(sql);
-                    // Bind the values to the parameters
                     ps.setString(1, name);
                     ps.setString(2, lastname);
                     ps.setString(3, city);
                     ps.setInt(4, age);
                     ps.setInt(5, office);
                     ps.setInt(6, id);
-                    // Execute the query
                     ps.executeUpdate();
                     System.out.println("Employee updated correctly");
                     field.setText("");
