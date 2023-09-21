@@ -9,9 +9,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class MyWindow extends JFrame {
+public class AddEmployee extends JFrame {
 
-    public MyWindow() {
+    public AddEmployee() {
         setTitle("Add employee");
 
         setSize(400, 300);
@@ -99,7 +99,7 @@ public class MyWindow extends JFrame {
     }
 
     public static void main(String[] args) {
-        MyWindow window = new MyWindow();
+        AddEmployee window = new AddEmployee();
 
         window.setVisible(true);
     }
