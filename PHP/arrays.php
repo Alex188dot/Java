@@ -1,6 +1,5 @@
 <a href="https://www.google.com">Google</a>
 <?php
-// This code here is PHP, not HTML
 
 $name = "John"; // this is a string variable
 $lastname = "Doe";
