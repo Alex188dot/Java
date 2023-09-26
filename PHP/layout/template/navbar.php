@@ -11,9 +11,6 @@
           <a class="nav-link" href="viewAllEmployees.php">View all employees</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="base.php">View employees by dept</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="insertNewUser.php">Insert a new employee</a>
         </li>
       </ul>

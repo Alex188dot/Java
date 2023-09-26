@@ -11,10 +11,14 @@
     // To know the file type
     $file_type = pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
     echo $file_type;
-
     echo "<br>";
+    
     if ($file_type == "jpg" || $file_type == "png" || $file_type == "jpeg" || $file_type == "svg") {
-        move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $file_name);
+        if (file_exists("uploads/" . $file_name)) {
+            echo "File already exists.";
+        } else {
+            move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $file_name);
+        }
     } else {
         echo "Invalid file type.";
     }

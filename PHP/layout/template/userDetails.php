@@ -10,6 +10,9 @@
         table {
             margin-top: 1rem;
         }
+        td {
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +37,7 @@
             echo "<th scope='col'>Age</th>";
             echo "<th scope='col'>City</th>";
             echo "<th scope='col'>Office</th>";
+            echo "<th scope='col'>Profile Image</th>";
             echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
@@ -43,6 +47,7 @@
             echo "<td>" . $row["age"] . "</td>";
             echo "<td>" . ucwords($row["city"]) . "</td>";
             echo "<td>" . ucwords($row["office_name"]) . "</td>";
+            echo "<td><img src='profile_pics/" . $row["profile_img"] . "' width='100px' height='100px'></td>";
             echo "</tr>";
             echo "</tbody>";
             echo "</table>";

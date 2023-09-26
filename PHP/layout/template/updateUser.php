@@ -33,6 +33,7 @@
             echo "<th scope='col'>City</th>";
             echo "<th scope='col'>Age</th>";
             echo "<th scope='col'>Office</th>";
+            echo "<th scope='col'>Profile Image</th>";
             echo "</tr>";
             echo "</thead>";
             echo "<tbody>";
@@ -42,6 +43,7 @@
             echo "<td><input type='text' name='city' value='" . $row["city"] . "'></td>";
             echo "<td><input type='text' name='age' value='" . $row["age"] . "'></td>";
             echo "<td><input type='text' name='office_id' value='" . $row["office_id"] . "'></td>";
+            echo "<td><input type='text' name='profile_img' value='" . $row["profile_img"] . "'></td>";
             echo "</tr>";
             echo "</tbody>";
             echo "</table>";

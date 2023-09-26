@@ -20,7 +20,7 @@
     <!-- Body -->
     <div class="container">
         <h1 class="text-center mt-2">Insert a new Employee</h1>
-        <form action="insertIntoDB.php" method="POST">
+        <form action="insertIntoDB.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name">
@@ -36,6 +36,10 @@
             <div class="mb-3">
                 <label for="age" class="form-label">Age</label>
                 <input type="age" class="form-control" id="age" name="age" placeholder="Age">
+            </div>
+            <div class="mb-3">
+                <label for="profile_img" class="form-label">Profile Picture</label>
+                <input accept="image/*" type="file" class="form-control" id="profile_img" name="profile_img" placeholder="Profile Picture">
             </div>
             <div class="mb-3">
                 <label for="office" class="form-label">Office:</label>
