@@ -13,11 +13,29 @@
         <li class="nav-item">
           <a class="nav-link" href="insertNewUser.php">Insert a new employee</a>
         </li>
+
+        <?php 
+
+        session_start();
+        $login = $_SESSION["loggedIn"];
+        $user = ucwords($_SESSION["name"]);
+    
+        if ($login == "ok") {
+            echo "<li class='nav-item'>
+                    <a class='nav-link'>Logged in as $user</a>
+                  </li>";
+            echo "<li class='nav-item'>
+                    <a class='nav-link' href='login.php'>Logout</a>
+                  </li>";
+        } else {
+            echo "<li class='nav-item'>
+                  </li>";
+        }
+    
+        ?>
+
+        if 
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>

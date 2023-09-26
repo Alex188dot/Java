@@ -34,11 +34,9 @@ $result = $conn->query($query);
 if ($result === TRUE) { 
     $outcome = 1; 
     header("Location: base.php?outcome=$outcome"); 
-    exit(); 
 } else { 
     $outcome = 0; 
     header("Location: base.php?outcome=$outcome"); 
-    exit(); 
 }
 
 ?>

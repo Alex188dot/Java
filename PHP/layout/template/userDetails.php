@@ -1,3 +1,10 @@
+<?php 
+
+    session_start();
+    if((!$_SESSION["loggedIn"] == "ok")) {
+        header("Location: login.php");
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +35,7 @@
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<h2 class='text-center mt-2 mb-2'>" . ucwords($row["name"]) . ucwords($row["lastname"]) ."</h2>";
+            echo "<h2 class='text-center mt-2 mb-2'>" . ucwords($row["name"]) . " " . ucwords($row["lastname"]) ."</h2>";
             echo "<table class='table'>";
             echo "<thead>";
             echo "<tr>";

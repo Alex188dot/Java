@@ -24,7 +24,7 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<h2 class='text-center mt-2 mb-2'>Update User: " . ucwords($row["name"]) . " " . ucwords($row["lastname"]) . "</h2>";
-            echo "<form method='POST' action='updateUserAction.php'>";
+            echo "<form method='POST' action='updateUserAction.php' enctype='multipart/form-data'>";
             echo "<table class='table'>";
             echo "<thead>";
             echo "<tr>";
@@ -43,7 +43,7 @@
             echo "<td><input type='text' name='city' value='" . $row["city"] . "'></td>";
             echo "<td><input type='text' name='age' value='" . $row["age"] . "'></td>";
             echo "<td><input type='text' name='office_id' value='" . $row["office_id"] . "'></td>";
-            echo "<td><input type='text' name='profile_img' value='" . $row["profile_img"] . "'></td>";
+            echo "<td><input accept='image/*' type='file' class='form-control' id='profile_img' name='profile_img' placeholder='Profile Picture'>";
             echo "</tr>";
             echo "</tbody>";
             echo "</table>";

@@ -1,3 +1,11 @@
+<?php 
+
+    session_start();
+    if((!$_SESSION["loggedIn"] == "ok")) {
+        header("Location: login.php");
+    }
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +27,17 @@
 <div class="container">
     <?php 
         $outcome = $_GET["outcome"];
+
         if ($outcome == 1) {
             echo "<div class='alert alert-success' role='alert' id='success'>
             User successfully added!
             </div>";
+            $outcome = null;
         } else if ($outcome == 0) {
             echo "<div class='alert alert-danger' role='alert' id=failure>There was an error with your request
             </div>";
-        }
+            $outcome = null;
+        } 
     ?>
 
     <?php include("selectionFromDB.php"); ?>
