@@ -45,6 +45,7 @@
             echo "</tr>";
             echo "</tbody>";
             echo "</table>";
+            echo "<input type=hidden name='id' value='" . $row["id"] . "'>";
             echo "<button type='submit' class='btn btn-primary'>Update</button>";
             echo "</form>";
         }
