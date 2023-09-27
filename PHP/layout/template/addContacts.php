@@ -73,8 +73,8 @@
         echo "<tbody>";
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
-            echo "<td>" . ucwords($row["contact_type"]) . "</td>";
-            echo "<td>" . str_replace("_", " ", $row["contact"]) . "</td>";
+            echo "<td>" . ucwords(str_replace("_", " ", $row["contact_type"])) . "</td>";
+            echo "<td>" . $row["contact"] . "</td>";
             echo "</tr>";
         }
         echo "</tbody>";
