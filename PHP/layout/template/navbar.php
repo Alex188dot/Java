@@ -28,7 +28,7 @@
     
         if ($login == "ok") {
             echo "<li class='nav-item'>
-                    <a class='nav-link'>Logged in as $user</a>
+                    <a class='nav-link fw-bold'>Logged in as $user</a>
                   </li>";
             echo "<li class='nav-item'>
                     <a class='nav-link' href='login.php'>Logout</a>

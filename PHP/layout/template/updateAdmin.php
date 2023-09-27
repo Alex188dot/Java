@@ -24,7 +24,7 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<h2 class='text-center mt-2 mb-2'>Update User: " . ucwords($row["name"]) . " " . ucwords($row["lastname"]) . "</h2>";
-            echo "<form method='POST' action='updateUserAction.php' enctype='multipart/form-data'>";
+            echo "<form method='POST' action='updateAdminAction.php'>";
             echo "<table class='table'>";
             echo "<thead>";
             echo "<tr>";

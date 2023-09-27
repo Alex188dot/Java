@@ -18,6 +18,10 @@
         table {
             margin-top: 1rem;
         }
+        h1 {
+            text-align: center;
+            margin: 1rem 0;
+        }
     </style>
 
 </head>
@@ -31,13 +35,13 @@
 
         if ($outcome == 1) {
             echo "<div class='alert alert-success' role='alert' id='success'>
-            User successfully added!
+            User successfully added/updated!
             </div>";
-            $outcome = null;
+            $outcome = 2;
         } else if ($outcome == 0) {
             echo "<div class='alert alert-danger' role='alert' id=failure>There was an error with your request
             </div>";
-            $outcome = null;
+            $outcome = 2;
         } 
     ?>
 
@@ -54,8 +58,9 @@
     function hideNotice() {
         success.style.display = "none";
         failure.style.display = "none";
+        clearInterval(hideNotice);
     }
-    setTimeout(hideNotice, 3000);
+    setInterval(hideNotice, 3000);
 </script>
 </body>
 </html>

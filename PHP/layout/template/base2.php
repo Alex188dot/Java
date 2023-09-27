@@ -18,6 +18,10 @@
         table {
             margin-top: 1rem;
         }
+        h1 {
+            text-align: center;
+            margin: 1rem 0;
+        }
     </style>
 
 </head>
@@ -31,13 +35,11 @@
 
         if ($outcome == 1) {
             echo "<div class='alert alert-success' role='alert' id='success'>
-            Admin successfully added!
+            Admin successfully added/updated!
             </div>";
-            $outcome = null;
         } else if ($outcome == 0) {
             echo "<div class='alert alert-danger' role='alert' id=failure>There was an error with your request
             </div>";
-            $outcome = null;
         } 
     ?>
 

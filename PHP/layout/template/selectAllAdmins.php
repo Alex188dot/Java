@@ -27,7 +27,7 @@
             echo "<td class='text-center'>" . ucwords($row["name"]) . "</td>";
             echo "<td class='text-center'>" . ucwords($row["lastname"]) . "</td>";
             echo "<td class='text-center'>" . ucwords($row["email"]) . "</td>";
-            echo "<td class='text-center'><a href='adminDetails.php?id=" . $row["id"] . "'><i class='bi bi-person'></i></a> | <a class='orangeIcon' href='updateAdmin.php?id=" . $row["id"] . "'><i class='bi bi-pencil-square'></i></a> | <a class='redIcon' href='deleteAdmin.php?id=" . $row["id"] . "'><i class='bi bi-trash-fill'></i></a></td>";
+            echo "<td class='text-center'><a href='adminDetails.php?id=" . $row["id"] . "'><i class='bi bi-person'></i></a> | <a class='orangeIcon' href='updateAdmin2.php?id=" . $row["id"] . "'><i class='bi bi-pencil-square'></i></a> | <a class='redIcon' href='deleteAdmin.php?id=" . $row["id"] . "'><i class='bi bi-trash-fill'></i></a></td>";
             echo "</tr>";
         }
     } else {
