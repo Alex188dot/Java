@@ -28,7 +28,7 @@
             echo "<td class='text-center'>" . ucwords($row["name"]) . "</td>";
             echo "<td class='text-center'>" . ucwords($row["lastname"]) . "</td>";
             echo "<td class='text-center'>" . ucwords($row["offices"]) . "</td>";
-            echo "<td class='text-center'><a href='userDetails.php?id=" . $row["id"] . "'><i class='bi bi-person'></i></a> | <a class='orangeIcon' href='updateUser.php?id=" . $row["id"] . "'><i class='bi bi-pencil-square'></i></a> | <i data-bs-toggle='modal' data-bs-target='#exampleModal" . $row["id"] . "' class='bi bi-trash-fill' style='cursor: pointer; color: red'></i></button></td>";
+            echo "<td class='text-center'><a href='userDetails.php?id=" . $row["id"] . "'><i class='bi bi-person'></i></a> | <a href='addContacts.php?id=" . $row["id"] . "'><i class='bi bi-person-lines-fill' style='cursor: pointer; color: green;'></i></a> | <a class='orangeIcon' href='updateUser.php?id=" . $row["id"] . "'><i class='bi bi-pencil-square'></i></a> | <i data-bs-toggle='modal' data-bs-target='#exampleModal" . $row["id"] . "' class='bi bi-trash-fill' style='cursor: pointer; color: red'></i></td>";
             echo "</tr>";
             echo "<input type='hidden' id='user_id' value='" . $row["id"] . "'>";
             echo "<div class='modal fade' id='exampleModal" . $row["id"] . "' tabindex='-1' aria-labelledby='exampleModalLabel" . $row["id"] . "' aria-hidden='true'>";
