@@ -26,7 +26,7 @@
 <?php include("navbar.php"); ?>
 <!-- body -->
 <div class="container">
-    <?php 
+<?php 
     $user = $_GET["id"];
     $conn = new mysqli("localhost", "root", "root", "javaDB");
     $query = "SELECT users.*, offices.name AS office_name FROM users 
@@ -35,36 +35,28 @@
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<h2 class='text-center mt-2 mb-2'>" . ucwords($row["name"]) . " " . ucwords($row["lastname"]) ."</h2>";
-            echo "<table class='table'>";
-            echo "<thead>";
-            echo "<tr>";
-            echo "<th scope='col'>First name</th>";
-            echo "<th scope='col'>Last name</th>";
-            echo "<th scope='col'>Age</th>";
-            echo "<th scope='col'>City</th>";
-            echo "<th scope='col'>Office</th>";
-            echo "<th scope='col'>Profile Image</th>";
-            echo "</tr>";
-            echo "</thead>";
-            echo "<tbody>";
-            echo "<tr>";
-            echo "<td>" . ucwords($row["name"]) . "</td>";
-            echo "<td>" . ucwords($row["lastname"]) . "</td>";
-            echo "<td>" . $row["age"] . "</td>";
-            echo "<td>" . ucwords($row["city"]) . "</td>";
-            echo "<td>" . ucwords($row["office_name"]) . "</td>";
-            echo "<td><img src='profile_pics/" . $row["profile_img"] . "' width='100px' height='100px'></td>";
-            echo "</tr>";
-            echo "</tbody>";
-            echo "</table>";
+            echo "<div class='container'>";
+            echo "<h2 class='text-center mt-4 mb-4'>" . ucwords($row["name"]) . " " . ucwords($row["lastname"]) ."</h2>";
+            echo "<div class='row'>";
+            echo "<div class='col-md-6'>";
+            echo "<p><strong>First name:</strong> " . ucwords($row["name"]) . "</p>";
+            echo "<p><strong>Last name:</strong> " . ucwords($row["lastname"]) . "</p>";
+            echo "<p><strong>Age:</strong> " . $row["age"] . "</p>";
+            echo "<p><strong>City:</strong> " . ucwords($row["city"]) . "</p>";
+            echo "<p><strong>Office:</strong> " . ucwords($row["office_name"]) . "</p>";
+            echo "</div>";
+            echo "<div class='col-md-6'>";
+            echo "<p><strong>Profile picture:</strong></p>";
+            echo "<img src='profile_pics/" . $row["profile_img"] . "' width='100' height='100'>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
         }
     } else {
         echo "No records found.";    
     }
     $conn->close();
-    ?>
-
+?>
 </div>
 <!-- end body  -->
 <?php include("footer.php"); ?>
