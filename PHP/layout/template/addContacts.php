@@ -18,6 +18,9 @@
             margin-top: 1rem;
             text-align: center;
         }
+        label {
+            margin-top: 1rem;
+        }
         td {
             vertical-align: middle;
         }
