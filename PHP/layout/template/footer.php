@@ -1,5 +1,5 @@
 <!-- footer -->
 <footer class="text-center text-body-secondary bg-body-tertiary fixed-bottom">
-  <p>Copyright © 2023</p>
+  <span> HR Management Solutions - Copyright © 2023</span>
 </footer>
 <!-- end footer  -->

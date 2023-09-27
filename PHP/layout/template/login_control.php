@@ -7,7 +7,7 @@ if ($conn->connect_error) {
 } 
 
 $email = $_POST["email"];
-$password = $_POST["password"];
+$password = md5($_POST["password"]);
 
 $sql = "SELECT * FROM admins WHERE email='$email' AND pwd='$password'";
 

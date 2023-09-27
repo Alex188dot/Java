@@ -36,11 +36,11 @@
             </div>
             <div class="mb-3">
                 <label for="city" class="form-label">City</label>
-                <input type="city" class="form-control" id="city" name="city" placeholder="City">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City">
             </div>
             <div class="mb-3">
                 <label for="age" class="form-label">Age</label>
-                <input type="age" class="form-control" id="age" name="age" placeholder="Age">
+                <input type="text" class="form-control" id="age" name="age" placeholder="Age">
             </div>
             <div class="mb-3">
                 <label for="profile_img" class="form-label">Profile Picture</label>

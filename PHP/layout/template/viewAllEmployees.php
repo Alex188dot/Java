@@ -18,12 +18,6 @@
         table {
             margin-top: 1rem;
         }
-        footer {
-            background-color: #f5f5f5;
-            padding: 20px;
-            text-align: center;
-            margin-top: auto;
-        }
     </style>
 </head>
 <body>

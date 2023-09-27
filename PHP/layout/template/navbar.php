@@ -1,5 +1,5 @@
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(90deg, rgba(255,252,247,1) 0%, rgba(255,119,5,1) 50%);">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,6 +12,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="insertNewUser.php">Insert a new employee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="viewAllAdmins.php">View all admins</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="insertNewAdmin.php">Insert a new admin</a>
         </li>
 
         <?php 
@@ -34,7 +40,6 @@
     
         ?>
 
-        if 
       </ul>
     </div>
   </div>

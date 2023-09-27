@@ -11,7 +11,7 @@
     $usersResult = $conn->query("SELECT users.id, users.name, users.lastname, offices.name as offices FROM users INNER JOIN offices ON users.office_id = offices.id;");
 
     if ($usersResult->num_rows > 0) {
-        echo "<h2 class='text-center mt-2 mb-2'>All Employees</h2>";
+        echo "<h1 class='text-center mt-2 mb-2'>All Employees</h1>";
         echo "<table class='table'>";
         echo "<thead>";
         echo "<tr>";
