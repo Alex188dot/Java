@@ -20,7 +20,8 @@ if ($result->num_rows > 0) {
     $_SESSION["id"] = $row["id"];
     $_SESSION["email"] = $row["email"];
     $_SESSION["name"] = $row["name"];
-    header("Location: viewAllEmployees.php");
+    $_SESSION["lastname"] = $row["lastname"];
+    header("Location: home.php");
 } else {
 echo "Wrong email or password";
 }
