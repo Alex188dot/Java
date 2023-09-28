@@ -34,29 +34,14 @@
 <?php 
     $user = $_GET["id"];
     $conn = new mysqli("localhost", "root", "root", "javaDB");
-    $query = "SELECT users.*, offices.name AS office_name FROM users 
-              INNER JOIN offices ON users.office_id = offices.id
+    $query = "SELECT * FROM users
               WHERE users.id = $user";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "<div class='container'>";
-            echo "<h2 class='text-center mt-4 mb-4'>" . ucwords($row["name"]) . " " . ucwords($row["lastname"]) ."</h2>";
-            echo "<div class='row'>";
-            echo "<div class='col-md-6'>";
-            echo "<p><strong>First name:</strong> " . ucwords($row["name"]) . "</p>";
-            echo "<p><strong>Last name:</strong> " . ucwords($row["lastname"]) . "</p>";
-            echo "<p><strong>Age:</strong> " . $row["age"] . "</p>";
-            echo "<p><strong>City:</strong> " . ucwords($row["city"]) . "</p>";
-            echo "<p><strong>Office:</strong> " . ucwords($row["office_name"]) . "</p>";
+            echo "<h2 class='text-center mt-4 mb-4'>" . ucwords($row["name"]) . " " . ucwords($row["lastname"]) . "</h2>";
             echo "</div>";
-            echo "<div class='col-md-6'>";
-            echo "<p><strong>Profile picture:</strong></p>";
-            echo "<img src='profile_pics/" . $row["profile_img"] . "' width='100' height='100'>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-
         }
     } else {
         echo "No records found.";
