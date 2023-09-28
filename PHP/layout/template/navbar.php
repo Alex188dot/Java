@@ -7,19 +7,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display: flex; justify-content: space-around; width: 100%;">
-        <li class="nav-item">
-          <a class="nav-link" href="viewAllEmployees.php">View all employees</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="insertNewUser.php">Insert a new employee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="viewAllAdmins.php">View all admins</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="insertNewAdmin.php">Insert a new admin</a>
-        </li>
-
         <?php 
 
         session_start();
@@ -27,6 +14,32 @@
         $user = ucwords($_SESSION["name"]);
     
         if ($login == "ok") {
+          echo '<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Employees
+            </a>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="nav-link" href="viewAllEmployees.php">View all employees</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="insertNewUser.php">Insert a new employee</a>
+              </li>  
+            </ul>
+          </li>';
+          echo '<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admins
+          </a>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="nav-link" href="viewAllAdmins.php">View all admins</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="insertNewAdmin.php">Insert a new admin</a>
+              </li>
+            </ul>
+          </li>';
             echo "<li class='nav-item'>
                     <a class='nav-link fw-bold'>Logged in as $user</a>
                   </li>";
