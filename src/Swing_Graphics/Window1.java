@@ -53,9 +53,22 @@ public class Window1 extends JFrame {
         });
         buttonsPanel.add(adminsButton);
 
+
+
         homePanel = new JPanel();
         homePanel.setBackground(Color.WHITE);
+        JLabel welcomeLabel = new JLabel("Welcome, " + name + " " + lastName);
+
+        welcomeLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        welcomeLabel.setForeground(Color.BLACK);
+
+        welcomeLabel.setHorizontalAlignment(JLabel.CENTER);
+
+        homePanel.add(welcomeLabel);
+
+
         mainPanel.add(homePanel, BorderLayout.CENTER);
+
 
         usersPanel = new JPanel(new GridLayout(0, 6)); // 6 columns
         usersPanel.setBackground(Color.WHITE);
@@ -68,6 +81,8 @@ public class Window1 extends JFrame {
         mainPanel.add(buttonsPanel, BorderLayout.NORTH);
 
         setContentPane(mainPanel);
+
+        switchToPanel(homePanel);
 
         setLocationRelativeTo(null);
         setVisible(true);
@@ -131,5 +146,5 @@ public class Window1 extends JFrame {
             }
 
 
-    });
-}}
+        });
+    }}
