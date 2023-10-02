@@ -38,7 +38,7 @@ public class Window1 extends JFrame {
         Login loginWindow = new Login();
         loginWindow.setVisible(true);
 
-        Window1 mainApplicationWindow = new Window1("John", "Doe", 1);
+        Window1 mainApplicationWindow = new Window1("", "", 0);
         mainApplicationWindow.setVisible(true);
     }
 }
