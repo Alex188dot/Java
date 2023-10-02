@@ -75,6 +75,8 @@ public class Login extends JFrame {
                     } else {
                         System.out.println("Wrong email or password");
                         label3.setText("Wrong email or password");
+                        field.setText("");
+                        field2.setText("");
                     }
 
                 } catch (SQLException event) {
