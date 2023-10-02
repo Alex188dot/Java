@@ -62,10 +62,16 @@ public class Login extends JFrame {
                     Statement st = connect.createStatement();
                     ResultSet rs = st.executeQuery("SELECT * FROM admins WHERE email = '"+email+"' AND pwd = '"+md5(password)+"';");
                     if (rs.next()) {
+                        int id = rs.getInt("id");
+                        String name = rs.getString("name");
+                        String lastname = rs.getString("lastname");
                         System.out.println("Login successful");
                         label3.setText("Login successful");
                         field.setText("");
                         field2.setText("");
+                        Window1 mainApplicationWindow = new Window1(name, lastname, id);
+                        mainApplicationWindow.setVisible(true);
+                        dispose();
                     } else {
                         System.out.println("Wrong email or password");
                         label3.setText("Wrong email or password");
