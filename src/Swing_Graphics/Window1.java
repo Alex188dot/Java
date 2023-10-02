@@ -18,7 +18,7 @@ public class Window1 extends JFrame {
     private final JPanel adminsPanel;
 
     public Window1(String name, String lastName, int id) {
-        setTitle("Main Application");
+        setTitle("HR Management Platform");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -66,6 +66,27 @@ public class Window1 extends JFrame {
 
         homePanel.add(welcomeLabel);
 
+        JButton insertButton = new JButton("Insert employee");
+        JButton updateButton = new JButton("Update employee details");
+
+        insertButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddEmployee addEmployeeWindow = new AddEmployee();
+                addEmployeeWindow.setVisible(true);
+            }
+        });
+
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UpdateEmployee updateEmployeeWindow = new UpdateEmployee();
+                updateEmployeeWindow.setVisible(true);
+            }
+        });
+
+        homePanel.add(insertButton);
+        homePanel.add(updateButton);
 
         mainPanel.add(homePanel, BorderLayout.CENTER);
 
@@ -92,43 +113,43 @@ public class Window1 extends JFrame {
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaDB", "root", "root");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
+            ResultSet resultSet = statement.executeQuery("SELECT users.id, users.name, users.lastname, users.city, users.age, offices.name AS office_name FROM users JOIN offices ON users.office_id = offices.id");
 
             JLabel idLabel = new JLabel("ID");
             JLabel nameLabel = new JLabel("Name");
             JLabel lastNameLabel = new JLabel("Lastname");
             JLabel cityLabel = new JLabel("City");
             JLabel ageLabel = new JLabel("Age");
-            JLabel officeIdLabel = new JLabel("Office ID");
+            JLabel officeLabel = new JLabel("Office");
 
             usersPanel.add(idLabel);
             usersPanel.add(nameLabel);
             usersPanel.add(lastNameLabel);
             usersPanel.add(cityLabel);
             usersPanel.add(ageLabel);
-            usersPanel.add(officeIdLabel);
+            usersPanel.add(officeLabel);
 
             while (resultSet.next()) {
                 id = resultSet.getInt("id");
-                name = resultSet.getString("name");
-                lastName = resultSet.getString("lastname");
-                String city = resultSet.getString("city");
+                name = capitalizeFirstLetter(resultSet.getString("name"));
+                lastName = capitalizeFirstLetter(resultSet.getString("lastname"));
+                String city = capitalizeFirstLetter(resultSet.getString("city"));
                 int age = resultSet.getInt("age");
-                int officeId = resultSet.getInt("office_id");
+                String officeName = capitalizeFirstLetter(resultSet.getString("office_name"));
 
                 idLabel = new JLabel(String.valueOf(id));
                 nameLabel = new JLabel(name);
                 lastNameLabel = new JLabel(lastName);
                 cityLabel = new JLabel(city);
                 ageLabel = new JLabel(String.valueOf(age));
-                officeIdLabel = new JLabel(String.valueOf(officeId));
+                JLabel officeDataLabel = new JLabel(officeName);
 
                 usersPanel.add(idLabel);
                 usersPanel.add(nameLabel);
                 usersPanel.add(lastNameLabel);
                 usersPanel.add(cityLabel);
                 usersPanel.add(ageLabel);
-                usersPanel.add(officeIdLabel);
+                usersPanel.add(officeDataLabel);
             }
 
             resultSet.close();
@@ -158,8 +179,8 @@ public class Window1 extends JFrame {
 
             while (resultSet.next()) {
                 id = resultSet.getInt("id");
-                name = resultSet.getString("name");
-                lastName = resultSet.getString("lastname");
+                name = capitalizeFirstLetter(resultSet.getString("name"));
+                lastName = capitalizeFirstLetter(resultSet.getString("lastname"));
                 String email = resultSet.getString("email");
 
                 JLabel idDataLabel = new JLabel(String.valueOf(id));
@@ -185,7 +206,12 @@ public class Window1 extends JFrame {
 
 
 
-
+    private String capitalizeFirstLetter(String text) {
+        if (text == null || text.isEmpty()) {
+            return text;
+        }
+        return Character.toUpperCase(text.charAt(0)) + text.substring(1);
+    }
 
     private void switchToPanel(JPanel panel) {
         mainPanel.remove(homePanel);
