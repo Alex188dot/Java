@@ -74,7 +74,7 @@ public class Window1 extends JFrame {
         usersPanel.setBackground(Color.WHITE);
         mainPanel.add(usersPanel, BorderLayout.CENTER);
 
-        adminsPanel = new JPanel();
+        adminsPanel = new JPanel(new GridLayout(0, 4));
         adminsPanel.setBackground(Color.WHITE);
         mainPanel.add(adminsPanel, BorderLayout.CENTER);
 
@@ -87,10 +87,26 @@ public class Window1 extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
 
+        // Users Panel
+
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaDB", "root", "root");
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
+
+            JLabel idLabel = new JLabel("ID");
+            JLabel nameLabel = new JLabel("Name");
+            JLabel lastNameLabel = new JLabel("Lastname");
+            JLabel cityLabel = new JLabel("City");
+            JLabel ageLabel = new JLabel("Age");
+            JLabel officeIdLabel = new JLabel("Office ID");
+
+            usersPanel.add(idLabel);
+            usersPanel.add(nameLabel);
+            usersPanel.add(lastNameLabel);
+            usersPanel.add(cityLabel);
+            usersPanel.add(ageLabel);
+            usersPanel.add(officeIdLabel);
 
             while (resultSet.next()) {
                 id = resultSet.getInt("id");
@@ -100,12 +116,12 @@ public class Window1 extends JFrame {
                 int age = resultSet.getInt("age");
                 int officeId = resultSet.getInt("office_id");
 
-                JLabel idLabel = new JLabel(String.valueOf(id));
-                JLabel nameLabel = new JLabel(name);
-                JLabel lastNameLabel = new JLabel(lastName);
-                JLabel cityLabel = new JLabel(city);
-                JLabel ageLabel = new JLabel(String.valueOf(age));
-                JLabel officeIdLabel = new JLabel(String.valueOf(officeId));
+                idLabel = new JLabel(String.valueOf(id));
+                nameLabel = new JLabel(name);
+                lastNameLabel = new JLabel(lastName);
+                cityLabel = new JLabel(city);
+                ageLabel = new JLabel(String.valueOf(age));
+                officeIdLabel = new JLabel(String.valueOf(officeId));
 
                 usersPanel.add(idLabel);
                 usersPanel.add(nameLabel);
@@ -121,7 +137,53 @@ public class Window1 extends JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+
+        // Admin panel
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaDB", "root", "root");
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT id, name, lastname, email FROM admins");
+
+            JLabel idLabel = new JLabel("ID");
+            JLabel nameLabel = new JLabel("Name");
+            JLabel lastNameLabel = new JLabel("Lastname");
+            JLabel emailLabel = new JLabel("Email");
+
+            adminsPanel.add(idLabel);
+            adminsPanel.add(nameLabel);
+            adminsPanel.add(lastNameLabel);
+            adminsPanel.add(emailLabel);
+
+            while (resultSet.next()) {
+                id = resultSet.getInt("id");
+                name = resultSet.getString("name");
+                lastName = resultSet.getString("lastname");
+                String email = resultSet.getString("email");
+
+                JLabel idDataLabel = new JLabel(String.valueOf(id));
+                JLabel nameDataLabel = new JLabel(name);
+                JLabel lastNameDataLabel = new JLabel(lastName);
+                JLabel emailDataLabel = new JLabel(email);
+
+                adminsPanel.add(idDataLabel);
+                adminsPanel.add(nameDataLabel);
+                adminsPanel.add(lastNameDataLabel);
+                adminsPanel.add(emailDataLabel);
+            }
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
     }
+
+
 
 
 
