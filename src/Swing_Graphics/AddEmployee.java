@@ -44,11 +44,12 @@ public class AddEmployee extends JFrame {
                 String city = field3.getText();
                 int age = Integer.parseInt(field4.getText());
                 int office = Integer.parseInt(field5.getText());
+                String profile_img = "profile_pic.jpeg";
 
                 try {
                     Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:8889/javaDB", "root", "root");
                     Statement st = connect.createStatement();
-                    st.executeUpdate("INSERT INTO users VALUES(null,'"+name+"', '"+lastname+"', '"+city+"', "+age+", "+office+")");
+                    st.executeUpdate("INSERT INTO users VALUES(null,'"+name+"', '"+lastname+"', '"+city+"', "+age+", "+office+", '"+profile_img+"')");
                     System.out.println("Employee inserted correctly");
                     field.setText("");
                     field2.setText("");
