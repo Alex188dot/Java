@@ -12,7 +12,6 @@ public class UpdateEmployee extends JFrame {
 
         setSize(400, 300);
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         JLabel label = new JLabel("Name: ");
@@ -151,8 +150,7 @@ public class UpdateEmployee extends JFrame {
 
         closeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-                System.out.println("Successfully logged out");
+                dispose();
             }
         });
 
