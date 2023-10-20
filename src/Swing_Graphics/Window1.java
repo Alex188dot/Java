@@ -53,6 +53,15 @@ public class Window1 extends JFrame {
         });
         buttonsPanel.add(adminsButton);
 
+        JButton exitButton = new JButton("Exit");
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        buttonsPanel.add(exitButton);
+
 
 
         homePanel = new JPanel();
