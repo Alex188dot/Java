@@ -14,8 +14,7 @@ After the choice the program will randomly assign Player 2 a character and depen
 
 <img width="2092" alt="Screenshot 2023-10-20 at 11 34 12" src="https://github.com/Alex188dot/Java-and-PHP/assets/117444853/fb1ea5c9-5f24-47ed-95c5-f16553aabf56">
 
-The Werewolf as mentioned before is a special character as he can take 2 forms: either Monster (during full moon) or Human (during crescent moon). Below you can see how against the same character  
-in its Werewolf form, he wins against the Vampire, while in his human form, he loses against the Vampire:
+The Werewolf as mentioned before is a special character as he can take 2 forms: either Monster (during full moon) or Human (during crescent moon). Below you can see how against the same character in its Werewolf form, he wins against the Vampire, while in his human form, he loses against the Vampire:
 
 <img width="2083" alt="Screenshot 2023-10-20 at 11 34 27" src="https://github.com/Alex188dot/Java-and-PHP/assets/117444853/f04b84cf-7315-41e6-b2e8-ab97bdc78e43">
 
