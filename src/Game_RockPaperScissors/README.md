@@ -6,7 +6,7 @@ The user (Player 1) after running the program, will be prompted to type one of t
 
 <img width="2100" alt="Screenshot 2023-10-20 at 11 18 44" src="https://github.com/Alex188dot/Java-and-PHP/assets/117444853/76b49e7a-d1c7-4dae-9dd0-4be23dcf2091">
 
-after inserting the word, the program will randomly choose which between rock, paper and scissors the Player 2 has chosen and will display who won:
+after inserting the word, the program will randomly choose which between rock, paper and scissors for Player 2 and will display who won:
 
 <img width="2096" alt="Screenshot 2023-10-20 at 11 19 35" src="https://github.com/Alex188dot/Java-and-PHP/assets/117444853/6f566930-136b-4cc6-b7f0-5149797e7b7e">
 
