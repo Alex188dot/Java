@@ -1,4 +1,4 @@
-package Interface_Exercise;
+package Game_CardGame;
 
 public class Werewolf extends Character implements Monster, Human {
     int Health;

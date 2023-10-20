@@ -1,4 +1,4 @@
-package Interface_Exercise;
+package Game_CardGame;
 import java.util.Random;
 public class P2 {
     public static String choose(String[] options) {

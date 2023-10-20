@@ -1,8 +1,8 @@
-package Interface_Exercise;
+package Game_CardGame;
 
-public class Vampire extends Character implements Monster {
+public class Hero extends Character implements Human{
     int Health;
-    public Vampire(String name, int Health) {
+    public Hero(String name, int Health) {
         super(name);
         this.Health = Health;
     }
@@ -21,7 +21,7 @@ public class Vampire extends Character implements Monster {
     }
 
     @Override
-    public int bite() {
-        return  2;
+    public int fight() {
+        return 3;
     }
 }

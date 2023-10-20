@@ -1,4 +1,4 @@
-package Base;
+package Game_RockPaperScissors;
 
 import java.util.Objects;
 import java.util.Random;
@@ -20,9 +20,12 @@ public class RockPaperScissors {
             int res1 = 0;
             int res2 = playerTwo();
             System.out.println("Your choice: " + cleanString(playerOne));
-            if (!Objects.equals(cleanString(playerOne), "rock") || !Objects.equals(cleanString(playerOne), "paper") || !Objects.equals(cleanString(playerOne), "scissors") || !Objects.equals(cleanString(playerOne), "exit")) {
-              System.out.println("---------------Please insert a valid command!-------------");
-            };
+            if (!Objects.equals(cleanString(playerOne), "rock") &&
+                    !Objects.equals(cleanString(playerOne), "paper") &&
+                    !Objects.equals(cleanString(playerOne), "scissors") &&
+                    !Objects.equals(cleanString(playerOne), "exit")) {
+                System.out.println("---------------Please insert a valid command!-------------");
+            }
             String resultString = "";
             if (res2 == 1) {
                 resultString = "rock";

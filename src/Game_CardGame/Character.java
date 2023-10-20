@@ -1,4 +1,4 @@
-package Interface_Exercise;
+package Game_CardGame;
 
 public class Character {
 
