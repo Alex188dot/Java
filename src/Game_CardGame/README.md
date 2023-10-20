@@ -2,8 +2,7 @@
 
 This card game is a fun representation of Interfaces in Java.  
 
-There are 3 warriors in this game: Hero, Vampire and Werewolf. All classes extend the Character class and implement either the Human or Monster interfaces. The only character which implements both is the Werewolf,   
-who thanks to the full moon can transform into a Wolf (thus using the Monster "bite" method), while during the crescent moon he is a Human (thus capable of using the "fight" method). All characters start with 15 Health points.
+There are 3 warriors in this game: Hero, Vampire and Werewolf. All classes extend the Character class and implement either the Human or Monster interfaces. The only character which implements both is the Werewolf, who thanks to the full moon can transform into a Wolf (thus using the Monster "bite" method), while during the crescent moon he is a Human (thus capable of using the "fight" method). All characters start with 15 Health points.
 
 Below a demo of how it works. The program will prompt the user to choose between Hero, Vampire or Werewolf by pressing 1, 2 or 3:
 
